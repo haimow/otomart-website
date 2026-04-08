@@ -1,0 +1,53 @@
+# Node modules (eğer npm kullanırsanız)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Lokal geliştirme dosyaları
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Netlify
+.netlify/
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+build/
+out/
+
+# IDE ayarları
+*.sublime-project
+*.sublime-workspace
+.vscode/settings.json
+
+# OS dosyaları
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Geçici dosyalar
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Log dosyaları
+*.log
+logs/
+
+# Package manager lock dosyaları (opsiyonel)
+# package-lock.json
+# yarn.lock
