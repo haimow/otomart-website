@@ -1,0 +1,63 @@
+# Netlify Configuration File
+# Daha fazla bilgi: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Build komutı (bu proje için gerekli değil - basit statik site)
+  command = ""
+  
+  # Yayınlanacak dizin
+  publish = "."
+
+# Yönlendirme kuralları
+[[redirects]]
+  from = "/*"
+  to = "/"
+  status = 200
+
+# Cache kontrol ayarları
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/script.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# Güvenlik başlıkları
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "no-referrer-when-downgrade"
+
+# Form işlemeleri (isteğe bağlı)
+# Netlify Forms kullanmak için contact-form name="contact" eklenmiş olmalı
+
+[context.production]
+  # Üretim ortamı ayarları
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  # Deploy preview ayarları
+  environment = { NODE_ENV = "development" }
+
+[context.branch-deploy]
+  # Branch deployment ayarları
+  environment = { NODE_ENV = "development" }
+
+# Netlify Analytics (isteğe bağlı)
+# [analytics]
+#   enabled = true
+
+# Fonksiyonlar (isteğe bağlı)
+# [[functions]]
+#   node_bundler = "esbuild"

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OtoMart - Otomat Hizmetleri</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDVNLmtqGhqGvLhCN_eqMqOWCJZKPkTcQ"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">OtoMart</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Anasayfa</a></li>
+                <li><a href="#services" class="nav-link">Hizmetler</a></li>
+                <li><a href="#gallery" class="nav-link">Galeri</a></li>
+                <li><a href="#locations" class="nav-link">Lokasyonlar</a></li>
+                <li><a href="#contact" class="nav-link">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Otomatik Satış Sistemleriyle Ticari Çözümleri</h1>
+            <p>Türkiye'nin dört bir yanında güvenilir otomat hizmetleri sunuyoruz</p>
+            <a href="#locations" class="cta-button">Lokasyonları Görüntüle</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🥤</div>
+                    <h3>İçecek Otomatları</h3>
+                    <p>Soğuk ve sıcak içecekler için en modern otomat sistemleri. Her zaman taze ve lezzetli.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🍪</div>
+                    <h3>Atıştırmalık Otomatları</h3>
+                    <p>Çeşitli snack ve atıştırmalıklar sunan güvenilir otomat çözümleri.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☕</div>
+                    <h3>Kahve Otomatları</h3>
+                    <p>Premium kalitede kahve ve espresso sistemi ile hizmet veriyoruz.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Teknik Destek</h3>
+                    <p>7/24 teknik destek ve bakım hizmetleri ile hep yanınızdayız.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Galeri</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1585694710202-542521d2e0b6?w=400&h=300&fit=crop" alt="Modern İçecek Otomatı">
+                    <p>Modern İçecek Otomatı</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1595521624472-c8e59d1d2000?w=400&h=300&fit=crop" alt="Snack Otomat Sistemi">
+                    <p>Snack Otomat Sistemi</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534432714160-234c92b7d4bc?w=400&h=300&fit=crop" alt="Kahve Otomat">
+                    <p>Kahve Otomat</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1557625070-b3f85e0ad1a8?w=400&h=300&fit=crop" alt="Otomat Yönetim Sistemi">
+                    <p>Otomat Yönetim Sistemi</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1595521625481-a67b11cafb38?w=400&h=300&fit=crop" alt="Mobil Otomat Servisi">
+                    <p>Mobil Otomat Servisi</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1585521624472-f4df2854d7ff?w=400&h=300&fit=crop" alt="Kurum İçi Otomat">
+                    <p>Kurum İçi Otomat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations" class="locations">
+        <div class="container">
+            <h2>Bulunduğumuz Lokasyonlar</h2>
+            <div class="locations-content">
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+                <div class="locations-list">
+                    <h3>Şubelerimiz</h3>
+                    <div class="location-items">
+                        <div class="location-item" data-location="Istanbul">
+                            <h4>İstanbul</h4>
+                            <p>Şişli, İstanbul</p>
+                            <p class="location-phone">+90 (212) 123-4567</p>
+                        </div>
+                        <div class="location-item" data-location="Ankara">
+                            <h4>Ankara</h4>
+                            <p>Çankaya, Ankara</p>
+                            <p class="location-phone">+90 (312) 234-5678</p>
+                        </div>
+                        <div class="location-item" data-location="Izmir">
+                            <h4>İzmir</h4>
+                            <p>Konak, İzmir</p>
+                            <p class="location-phone">+90 (232) 345-6789</p>
+                        </div>
+                        <div class="location-item" data-location="Duzce">
+                            <h4>Düzce</h4>
+                            <p>Merkez, Düzce</p>
+                            <p class="location-phone">+90 (380) 456-7890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Telefon</h3>
+                        <p>+90 (380) 456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>E-posta</h3>
+                        <p>info@otomart.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Adres</h3>
+                        <p>Merkez Mah., Düzce, Türkiye</p>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Adınız" required>
+                    <input type="email" placeholder="E-posta Adresiniz" required>
+                    <textarea placeholder="Mesajınız" rows="5" required></textarea>
+                    <button type="submit" class="submit-button">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 OtoMart. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
